@@ -26,3 +26,8 @@ document.getElementById('investmentCalcBtn').addEventListener('click', () => {
     const futureValue = calculateInvestmentReturn(principal, rate, timesCompounded, time);
     document.getElementById('result').innerText = `Future Value: ${futureValue}`;
 });
+
+if (isNaN(principal) || isNaN(rate) || isNaN(time)) {
+    alert('Please enter valid numbers for all fields.');
+    return;
+}
